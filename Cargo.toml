@@ -1,0 +1,24 @@
+[package]
+name = "iso3166"
+version = "1.0.0"
+authors = ["Douman <douman@gmx.se>"]
+edition = "2018"
+description = "ISO 3166 country data"
+readme = "README.md"
+repository = "https://github.com/DoumanAsh/iso3166"
+license = "BSL-1.0"
+keywords = ["iso3166"]
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+    "README.md",
+    "LICENSE",
+]
+
+[dependencies.serde]
+version = "1"
+default-features = false
+optional = true
+
+[package.metadata.docs.rs]
+features = ["serde"]
