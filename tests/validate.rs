@@ -22,6 +22,8 @@ fn should_be_valid() {
         assert!(alpha3.insert(country.alpha3));
         assert!(alpha2.insert(country.alpha2));
 
+        assert_eq!(country, Country::from_id(country.id).unwrap());
+
         assert_eq!(country, Country::from_alpha2(country.alpha2).unwrap());
         assert!(Country::from_alpha2(&country.alpha2.to_lowercase()).is_none());
         assert_eq!(country, Country::from_alpha2_ignore_case(country.alpha2).unwrap());

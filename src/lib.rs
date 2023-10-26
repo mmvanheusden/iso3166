@@ -72,6 +72,17 @@ impl Country {
     }
 
     #[inline(always)]
+    ///Converts from country id
+    pub fn from_id(id: u16) -> Option<Self> {
+        for country in LIST {
+            if country.id == id {
+                return Some(*country)
+            }
+        }
+        None
+    }
+
+    #[inline(always)]
     ///Converts from 2 digit country code
     pub fn from_alpha2(code: &str) -> Option<Self> {
         if code.len() == 2 {
