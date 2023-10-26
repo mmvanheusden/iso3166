@@ -13,6 +13,9 @@ fn should_be_valid() {
     let mut alpha3 = HashSet::new();
     let mut alpha2 = HashSet::new();
     for country in LIST {
+        assert_eq!(country.alpha2.len(), 2);
+        assert_eq!(country.alpha3.len(), 3);
+
         assert!(countries.insert(country));
         assert!(ids.insert(country.id));
         assert!(name.insert(country.name));
