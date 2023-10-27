@@ -6,6 +6,8 @@ use std::collections::HashSet;
 #[test]
 fn should_be_valid() {
     assert_eq!(mem::size_of::<Country>(), mem::size_of::<usize>());
+    assert_eq!(mem::size_of::<Option<Country>>(), mem::size_of::<usize>());
+    assert_eq!(mem::size_of::<Result<Country, ()>>(), mem::size_of::<usize>());
 
     let mut countries = HashSet::new();
     let mut ids = HashSet::new();

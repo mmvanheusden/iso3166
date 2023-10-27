@@ -58,6 +58,7 @@ pub struct Data {
     pub region: Region,
 }
 
+#[repr(transparent)]
 #[derive(Clone, Copy)]
 ///Country
 pub struct Country(&'static Data);
